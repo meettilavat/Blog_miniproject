@@ -1,0 +1,120 @@
+* {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+body {
+font-family: 'Roboto', sans-serif;
+}
+a {
+text-decoration: none;
+}
+.cont {
+width: 100%;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+    font-size: 2vh!important;
+}
+.navbar, .navbar .cont {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+}
+@media (max-width: 768px) {
+.navbar, .navbar .cont {
+    display: block;
+}
+}
+.navbar {
+    padding: 1.15vh 1vh;
+    background-color: #fff;
+}
+@media (min-width: 576px) {
+    .navbar .cont {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .navbar .cont {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .navbar .cont {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .navbar .cont {
+        max-width: 80%;
+    }
+}
+.navbar .navbar-header {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+}
+
+.navbar .navbar-header > a {
+    font-weight: 500;
+    color: #3c4250;
+}
+
+.navbar .navbar-menu .navbar-nav {
+    margin-left: auto;
+    flex-direction: row;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav {
+        width: 100%;
+        display: block;
+        border-top: 1px solid #eee;
+        margin-top: 1rem;
+    }
+}
+.navbar .navbar-menu .navbar-nav > li > a {
+    color: #3c4250;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5vh 1.5vh;
+}
+.navbar .navbar-menu .navbar-nav > li > a:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+    .navbar .navbar-menu .navbar-nav > li > a {
+        border-bottom: 1px solid #eee;
+    }
+}
+.navbar .navbar-menu .navbar-nav > li.active a {
+    color: #66f;
+}
+.navbar .navbar-header > a span {
+    color: rgba(0, 0, 0, 0.6);
+}
+.navbar .navbar-header h4 {
+    font-weight: 500!important;
+    font-size: 3vh!important;
+}
+@media (max-width: 768px) {
+    .navbar .navbar-header h4 {
+        font-size: 1.05rem;
+    }
+}
