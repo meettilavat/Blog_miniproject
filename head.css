@@ -32,7 +32,8 @@ justify-content: space-between;
 }
 .navbar {
     padding: 1.15vh 1vh;
-    background-color: #fff;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 @media (min-width: 576px) {
     .navbar .cont {
