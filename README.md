@@ -6,7 +6,9 @@ CKEditor. Posts are stored in a MySQL database.
 
 ## Setup
 1. Create a MySQL database using the SQL script from `sql/Dump20201031.sql`.
-2. Update `config.php` with your database credentials.
+2. Configure your database credentials. You can either edit `config.php` or set
+   the environment variables `DB_SERVER`, `DB_USERNAME`, `DB_PASSWORD` and `DB_NAME`.
+   A `.env.example` file is provided as a reference.
 3. Serve the project through a PHP-capable web server (e.g. `php -S` for local
    testing).
 
