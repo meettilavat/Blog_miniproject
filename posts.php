@@ -29,12 +29,12 @@ include 'head.php';
             <div class="container">
                 <div class="content">
                     <div class="content-img">
-                        <img src="<?=$data->image;?>" alt="Image">
+                        <img src="<?=htmlspecialchars($data->image, ENT_QUOTES, 'UTF-8');?>" alt="Image">
                     </div>
                     <div class="content-text">
-                        <h2 class="content-title"><?=$data->title; ?></h2>
-                        <h4 class="content-subtitle">By <?=$data->username; ?> on <?=date('jS M', strtotime($data->created_at));?></h4>
-                        <p class="content-paragraph"><?=$data->subtitle; ?></p>
+                        <h2 class="content-title"><?=htmlspecialchars($data->title, ENT_QUOTES, 'UTF-8');?></h2>
+                        <h4 class="content-subtitle">By <?=htmlspecialchars($data->username, ENT_QUOTES, 'UTF-8');?> on <?=date('jS M', strtotime($data->created_at));?></h4>
+                        <p class="content-paragraph"><?=htmlspecialchars($data->subtitle, ENT_QUOTES, 'UTF-8');?></p>
                         <a href="show.php?id=<?php echo $data->id;?>" class="btn">View More</a>
                     </div>
                 </div>
