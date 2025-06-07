@@ -1,9 +1,14 @@
 <?php
 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'password');
-define('DB_NAME', 'test');
+$dbServer = getenv('DB_SERVER') ?: 'localhost';
+$dbUsername = getenv('DB_USERNAME') ?: 'root';
+$dbPassword = getenv('DB_PASSWORD') ?: 'password';
+$dbName = getenv('DB_NAME') ?: 'test';
+
+define('DB_SERVER', $dbServer);
+define('DB_USERNAME', $dbUsername);
+define('DB_PASSWORD', $dbPassword);
+define('DB_NAME', $dbName);
 
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
@@ -12,9 +17,9 @@ if($link === false){
 }
 
 function GetALL() {
-    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql = "select * from contents ORDER BY id DESC";
-    $result = $link->query($sql);
+    $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $sql = "SELECT * FROM contents ORDER BY id DESC";
+    $result = $conn->query($sql);
     return $result;
 }
 ?>
